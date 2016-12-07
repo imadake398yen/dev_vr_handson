@@ -25,8 +25,8 @@ public class ObjectDescriptionController
 		transform.LookAt(player.transform);
 
 		if (target != null) {
-			transform.transform.position = player.transform.position 
-				+ (target.transform.position - player.transform.position).normalized * 2.0f;
+			transform.position = player.transform.position 
+				+ (target.Center.position - player.transform.position).normalized * 2.0f;
 		}
 
 		remainingDesplayTime -= Time.deltaTime;
