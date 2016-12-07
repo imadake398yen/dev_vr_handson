@@ -22,11 +22,11 @@ public class ObjectDescriptionController
 		canvas.enabled = target == null ? false : true;
 		if (!canvas.enabled) return;
 
-		transform.LookAt(player.transform);
+		transform.LookAt(player.diveCameraOrigin.position);
 
 		if (target != null) {
-			transform.position = player.transform.position 
-				+ (target.Center.position - player.transform.position).normalized * 2.0f;
+			transform.position = player.diveCameraOrigin.position 
+				+ (target.Center.position - player.diveCameraOrigin.position).normalized * 2.0f;
 		}
 
 		remainingDesplayTime -= Time.deltaTime;

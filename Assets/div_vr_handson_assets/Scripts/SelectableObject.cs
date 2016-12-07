@@ -3,6 +3,8 @@ using System.Collections;
 
 public class SelectableObject : MonoBehaviour {
 
+	public Const.ObjectType objectType;
+
 	[SerializeField] private Transform center;
 	public Transform Center {
 		get {
