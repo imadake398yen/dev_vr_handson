@@ -46,7 +46,6 @@ public class ObjectDescriptionController
 	}
 
 	private IEnumerator PutText (string text) {
-		print(text);
 		for (int i=0; i<text.Length; i++) {
 			descriptionLabel.text = text.Substring(0, i+1);
 			yield return new WaitForSeconds(0.08f);
